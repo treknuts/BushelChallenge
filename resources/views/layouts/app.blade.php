@@ -5,7 +5,7 @@
     </head>
     <body>
         @section('header')
-            <div class='jumbotron'>
+            <div class='jumbotron' style="background-color: #F2BC23">
                 <h1>{{ $title ?? '' }}</h1>
             </div>
         @show
