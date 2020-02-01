@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('/', 'IndexController@show');
+
 Route::get('/pokedex', 'PokedexController@show');
 
 Route::get('pokemon/{id}', 'PokemonController@show');

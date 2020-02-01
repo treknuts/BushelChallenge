@@ -1,7 +1,11 @@
 <html>
+    <head>
+        <title>{{ $title ?? ''}}</title>
+    </head>
     <body>
-        <h1>Bushel Backend Challenge!</h1>
-
+        <h1>{{ $title ?? '' }}</h1>
         @yield('content')
+
+        @section('pokedex')
     </body>
 </html>
