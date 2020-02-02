@@ -13,7 +13,7 @@
 
 Route::get('/', 'IndexController@show');
 
-Route::get('/pokedex', 'PokedexController@show')->name('pokedex');
+Route::get('/pokedex', 'PokemonController@index')->name('pokedex');
 
 Route::get('pokemon/{id}', 'PokemonController@show')->name('pokemon');
 

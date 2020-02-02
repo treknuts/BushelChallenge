@@ -1,6 +1,6 @@
 <html>
 <body>
-    @extends('layouts.app')
+    @extends('layout')
     @section('content')
         <h3>Pokedex!</h3>
         <div class="container">
