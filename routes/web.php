@@ -17,4 +17,13 @@ Route::get('/pokedex', 'PokemonController@index')->name('pokedex');
 
 Route::get('pokemon/{id}', 'PokemonController@show')->name('pokemon');
 
+Route::get('/lookup', function()    {
+    return view('lookup');
+})->name('lookup');
+
+Route::get('/captured', function()    {
+    return view('captured');
+});
+
+
 
