@@ -1,5 +1,7 @@
 <?php
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,15 +17,16 @@ Route::get('/', 'IndexController@show');
 
 Route::get('/pokedex', 'PokemonController@index')->name('pokedex');
 
-Route::get('pokemon/{id}', 'PokemonController@show')->name('pokemon');
-
 Route::get('/lookup', function()    {
     return view('lookup');
 })->name('lookup');
+
+Route::get('pokemon/{id}', 'PokemonController@show')->name('pokemon');
 
 Route::get('/captured', function()    {
     return view('captured');
 });
 
+Auth::routes();
 
-
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
