@@ -20,4 +20,13 @@ class PokemonController extends Controller
         return view('pokemon', ['pokemon' => json_decode($pokemon, true)]);
     }
 
+    public function redirectPokemon(Request $request)   {
+        if($request->pid)  {
+            return redirect()->route('pokemon', ['id' => $request->pid]);
+        }
+        else    {
+            return view('lookup');
+        }
+    }
+
 }

@@ -17,11 +17,9 @@ Route::get('/', 'IndexController@show');
 
 Route::get('/pokedex', 'PokemonController@index')->name('pokedex');
 
-Route::get('/lookup', function()    {
-    return view('lookup');
-})->name('lookup');
+Route::any('/pokemon', 'PokemonController@redirectPokemon')->name('lookup');
 
-Route::get('pokemon/{id}', 'PokemonController@show')->name('pokemon');
+Route::any('pokemon/{id}', 'PokemonController@show')->name('pokemon');
 
 Route::get('/captured', function()    {
     return view('captured');

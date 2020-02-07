@@ -11,18 +11,18 @@
                 <h1>{{ $title ?? '' }}</h1>
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: #4e342e">
                 <a class="navbar-brand" href="/">
-                    <img src="{{url('/images/pokeball.png')}}" width="30" height="30" alt="Pokeball"></img>
+                    <img src="{{url('/images/pokeball.png')}}" width="30" height="30" alt="Pokeball">
                 </a>
                     <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-link {{ Request::path() === 'pokedex' ? 'current_page_item' : '' }}" href="/pokedex">Pokedex</a>
+                            <li class="nav-item">
+                                <a class="nav-link {{ Request::path() === 'pokedex' ? 'active' : '' }}" href="/pokedex">Pokedex</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ Request::path() === 'lookup' ? 'current_page_item' : '' }}" href="/lookup">Find a Pokemon</a>
+                                <a class="nav-link {{ Request::path() === 'pokemon' ? 'active' : '' }}" href="/pokemon">Find a Pokemon</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ Request::path() === 'captured' ? 'current_page_item' : '' }}" href="/captured">Captured Pokemon</a>
+                                <a class="nav-link {{ Request::path() === 'captured' ? 'active' : '' }}" href="/captured">Captured Pokemon</a>
                             </li>
                         </ul>
                     </div>
