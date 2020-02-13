@@ -16,8 +16,10 @@ class PokemonController extends Controller
     
     public function show($id) {
         $pokemon = Pokemon::where('id', $id)->firstOrFail();
+        $types = json_encode($pokemon->types);
+        $stats = $pokemon->stats;
         $pokemon = $pokemon->toJson();
-        return view('pokemon', ['pokemon' => json_decode($pokemon, true)]);
+        return view('pokemon', ['pokemon' => json_decode($pokemon, true), 'stats' => json_decode($stats, true)]);
     }
 
     public function redirectPokemon(Request $request)   {
